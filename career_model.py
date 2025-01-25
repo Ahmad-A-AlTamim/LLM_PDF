@@ -8,11 +8,8 @@ load_dotenv()
 class CareerPathRecommender:
     def __init__(self):
         # Retrieve the API key from environment variables
-        api_key = os.getenv('c925262c15583647e777b5fb3078142e34594da9f4d0c09ad24897ae1a51d08c')
-        if not api_key:
-            raise ValueError("API key must be set in the environment variables or .env file.")
+        api_key ="c925262c15583647e777b5fb3078142e34594da9f4d0c09ad24897ae1a51d08c"
 
-        # Initialize the Together API client with the API key
         self.client = Together(api_key=api_key)
 
     def get_recommendations(self, resume_data):
